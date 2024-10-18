@@ -1,0 +1,80 @@
+{
+  "students": {
+    "_id": "ObjectId",
+    "student_id": "String",
+    "name": "String",
+    "email": "String",
+    "department": {
+      "department_id" : "string",
+      "department_name" : "string"
+    },
+    "enrollments": [
+      {
+        "course_id": "String",
+        "course_name" : "string"
+      }
+    ]
+  },
+  
+  "courses": {
+    "_id": "ObjectId",
+    "course_id": "String",
+    "name": "String",
+    "department": {
+      "department_id" : "string",
+      "department_name" : "string"
+    },
+    "instructors": [
+      {
+        "instructor_id": "String",
+        "instructor_name" : "string"
+      }
+    ],
+    "enrollments": [
+      {
+        "student_id": "String",
+        "course_name" : "string"
+      }
+    ]
+  },
+  
+  "instructors": {
+    "_id": "ObjectId",
+    "instructor_id": "String",
+    "name": "String",
+    "department": {
+      "department_id" : "string",
+      "department_name" : "string"
+    },
+    "courses_taught": [
+      {
+        "course_id": "String",
+        "course_name" : "string"
+      }
+    ]
+  },
+  
+  "departments": {
+    "_id": "ObjectId",
+    "department_id": "String",
+    "name": "String",
+    "courses": [
+      {
+        "course_id": "String",
+        "course_name" : "string"
+      }
+    ],
+    "instructors": [
+      {
+        "instructor_id": "String",
+        "instructor_name" : "string"
+      }
+    ],
+    "students": [
+      {
+        "student_id": "String",
+        "student_name" : "string"
+      }
+    ]
+  }
+}
